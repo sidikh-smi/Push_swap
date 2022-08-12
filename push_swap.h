@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:06:04 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/11 00:32:00 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/12 15:32:50 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new);
 t_list	*ft_lstnew(int content);
 int		ft_atoi(const char *str);
 int		ft_isdigit(int c);
-void	operation_sa(int *a, int *b);
-//void	operation_sb(t_list *b);
+void	operation_sa(t_list *a);
+void	operation_sb(t_list *b);
 
 #endif

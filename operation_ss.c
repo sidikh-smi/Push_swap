@@ -6,14 +6,14 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:18:31 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/11 00:32:07 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/11 18:20:51 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_ss(int *a, int *b)
-{
-	operation_sa(a, b);
-	//operation_sb(b);
-}
+// void	operation_ss(int *a, int *b)
+// {
+// 	//operation_sa(a, b);
+// 	//operation_sb(b);
+// }

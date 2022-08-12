@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:04:57 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/11 00:42:21 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/12 15:33:21 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	main(int argc, char **argv)
 {
-	int	*a;
-	int	*b;
+	t_list	*a;
+	//int	*b;
 	int		i;
 
-	i = 0;
-	b = NULL;
+	i = 1;
+	//b = NULL;
 	a = NULL;
 	if (argc < 1)
 	{
@@ -28,18 +28,16 @@ int	main(int argc, char **argv)
 	}
 	else if (argc > 1)
 	{
-		printf("here\n");
 		while (argv[i])
 		{
-			a[i] = ft_atoi(argv[i]);
+			ft_lstadd_front(&a, ft_lstnew(ft_atoi(argv[i])));
 			i++;
 		}
-		i = 0;
-		operation_sa(a, b);
+		operation_sa(a);
 		while (a)
 		{
-			printf("%d\n", a[i]);
-			i++;
+			printf("%d\n", a->content);
+			a = a->next;
 		}
 	}
 }
