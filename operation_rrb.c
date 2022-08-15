@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   operation_rrb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/15 15:25:42 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/14 19:10:43 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/14 19:13:37 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void	operation_pa(t_list *a, t_list *b)
-// {
-// 	t_list	*tmp;
+void	operation_rrb(t_list **b)
+{
+	t_list	*tmp;
 
-// 	if ()
-// }
+	tmp = *b;
+	while (tmp->next->next)
+		tmp = tmp->next;
+	tmp->next->next = *b;
+	*b = tmp->next;
+	tmp->next = NULL;
+}

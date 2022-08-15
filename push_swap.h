@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:06:04 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/12 15:32:50 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/15 15:34:54 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,10 @@ int		ft_atoi(const char *str);
 int		ft_isdigit(int c);
 void	operation_sa(t_list *a);
 void	operation_sb(t_list *b);
+void	operation_ra(t_list **a);
+void	operation_ss(t_list *a, t_list *b);
+void	operation_rra(t_list **a);
+void	operation_rrb(t_list **b);
+void	operation_pb(t_list **a, t_list **b);
 
 #endif

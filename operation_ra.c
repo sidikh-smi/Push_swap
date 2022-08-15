@@ -6,33 +6,22 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 23:21:33 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/11 18:15:41 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/14 16:02:34 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_ra(t_list *a)
+void	operation_ra(t_list **a)
 {
-	int	tmp;
+	t_list	*tmp;
+	t_list	*head;
 
-	tmp = a->content;
-	a->content = a->next->content;
-	a->next->content = a->next->next->content;
-	a->next->next->content = tmp;
-}
-
-int	main()
-{
-	t_list	*a;
-
-	a = ft_lstnew(15);
-	ft_lstadd_front(&a, ft_lstnew(12));
-	ft_lstadd_front(&a, ft_lstnew(20));
-	operation_ra(a);
-	while(a)
-	{
-		printf("%d\n", a->content);
-		a = a->next;
-	}
+	tmp = *a;
+	head = (*a)->next;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *a;
+	(*a)->next = NULL;
+	*a = head;
 }

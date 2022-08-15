@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   operation_rb.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/15 15:25:42 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/14 16:07:04 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/14 16:08:30 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void	operation_pa(t_list *a, t_list *b)
-// {
-// 	t_list	*tmp;
+void	operation_rb(t_list **b)
+{
+	t_list	*tmp;
+	t_list	*head;
 
-// 	if ()
-// }
+	tmp = *b;
+	head = (*b)->next;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *b;
+	(*b)->next = NULL;
+	*b = head;
+}
