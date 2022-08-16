@@ -6,13 +6,13 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:25:39 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/08 14:26:26 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/15 22:42:23 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	det_error(char *s)
-{
+// void	det_error(char *s)
+// {
 	
-}
+// }
