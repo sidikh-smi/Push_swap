@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   index_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:07:29 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/21 00:12:27 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/21 01:06:29 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_pa(t_list **a, t_list **b)
+void	index_list(t_list **a)
 {
+	int		*tab;
+	int		i;
 	t_list	*tmp;
 
-	if (*b == NULL)
-		return ;
-	if (*a == NULL)
+	tmp = *a;
+	tab = add_tab(*a);
+	bubble_sort(tab, ft_lstsize(*a) - 1);
+	while (tmp)
 	{
-		*a = *b;
-		*b = (*b)->next;
-		(*a)->next = NULL;
+		i = 0;
+		while (i < ft_lstsize(*a))
+		{
+			if (tab[i] == tmp->content)
+				tmp->index = i;
+			i++;
+		}
+		tmp = tmp->next;
 	}
-	else
-	{
-		tmp = (*b)->next;
-		(*b)->next = *a;
-		(*a) = *b;
-		*b = tmp;
-	}
-	write(1, "pa\n", 3);
 }

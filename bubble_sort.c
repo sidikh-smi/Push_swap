@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   bubble_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:07:29 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/20 16:48:56 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/20 23:31:47 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_pa(t_list **a, t_list **b)
+void	swap(int *x, int *y)
 {
-	t_list	*tmp;
+	int	tmp;
 
-	if (*b == NULL)
-		return ;
-	if (*a == NULL)
+	tmp = *x;
+	*x = *y;
+	*y = tmp;
+}
+
+void	bubble_sort(int *tab, int size)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < size)
 	{
-		*a = *b;
-		*b = (*b)->next;
-		(*a)->next = NULL;
+		j = 0;
+		while (j < size - i)
+		{
+			if (tab[j] > tab[j + 1])
+				swap(&tab[j], &tab[j + 1]);
+			j++;
+		}
+		i++;
 	}
-	else
-	{
-		tmp = (*b)->next;
-		(*b)->next = *a;
-		(*a) = *b;
-		*b = tmp;
-	}
-	write(1, "pa\n", 3);
 }

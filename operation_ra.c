@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 23:21:33 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/14 16:02:34 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/22 17:00:30 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	operation_ra(t_list **a)
 	tmp->next = *a;
 	(*a)->next = NULL;
 	*a = head;
+	write(1, "ra\n", 3);
 }

@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:07:29 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/20 19:13:48 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/20 19:28:02 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_pa(t_list **a, t_list **b)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*tmp;
+	t_list	*n;
+	int		count;
 
-	if (*b == NULL)
-		return ;
-	if (*a == NULL)
+	count = 0;
+	n = lst;
+	while (n)
 	{
-		*a = *b;
-		*b = (*b)->next;
-		(*a)->next = NULL;
+		count++;
+		n = n->next;
 	}
-	else
-	{
-		tmp = (*b)->next;
-		(*b)->next = *a;
-		(*a) = *b;
-		*b = tmp;
-	}
-	write(1, "pa\n", 3);
+	return (count);
 }

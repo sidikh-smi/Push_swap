@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:19:08 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/15 17:16:28 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/22 17:00:10 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ void	operation_pb(t_list **a, t_list **b)
 		(*b) = *a;
 		*a = tmp;
 	}
+	write(1, "pb\n", 3);
 }

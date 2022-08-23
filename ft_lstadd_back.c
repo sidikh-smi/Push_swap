@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:07:29 by skhaliff         ###   ########.fr       */
+/*   Created: 2021/11/23 01:01:14 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/18 23:41:57 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include"push_swap.h"
 
-void	operation_pa(t_list **a, t_list **b)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*tmp;
 
-	if (*b == NULL)
+	if (alst == NULL || new == NULL)
 		return ;
-	if (*a == NULL)
+	if (*alst)
 	{
-		*a = *b;
-		*b = (*b)->next;
-		(*a)->next = NULL;
+		tmp = ft_lstlast(*alst);
+		tmp->next = new;
 	}
 	else
-	{
-		tmp = (*b)->next;
-		(*b)->next = *a;
-		(*a) = *b;
-		*b = tmp;
-	}
-	write(1, "pa\n", 3);
+		*alst = new;
 }

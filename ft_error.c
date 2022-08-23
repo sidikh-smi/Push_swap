@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:07:29 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/17 20:10:47 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/18 16:08:23 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_pa(t_list **a, t_list **b)
+void	ft_error(char *s)
 {
-	t_list	*tmp;
+	int	i;
 
-	if (*b == NULL)
-		return ;
-	if (*a == NULL)
+	i = 0;
+	while (s[i])
 	{
-		*a = *b;
-		*b = (*b)->next;
-		(*a)->next = NULL;
+		write(2, &s[i], 1);
+		i++;
 	}
-	else
-	{
-		tmp = (*b)->next;
-		(*b)->next = *a;
-		(*a) = *b;
-		*b = tmp;
-	}
-	write(1, "pa\n", 3);
+	exit(1);
 }

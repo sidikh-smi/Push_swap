@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pa.c                                     :+:      :+:    :+:   */
+/*   add_tab.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:07:29 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/20 17:16:32 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/20 23:25:28 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_pa(t_list **a, t_list **b)
+int	*add_tab(t_list *a)
 {
+	int		*tab;
+	int		i;
 	t_list	*tmp;
 
-	if (*b == NULL)
-		return ;
-	if (*a == NULL)
+	tmp = a;
+	i = 0;
+	tab = malloc(sizeof(int) * ft_lstsize(a));
+	if (!tab)
+		return (NULL);
+	while (tmp)
 	{
-		*a = *b;
-		*b = (*b)->next;
-		(*a)->next = NULL;
+		tab[i] = tmp->content;
+		tmp = tmp->next;
+		i++;
 	}
-	else
-	{
-		tmp = (*b)->next;
-		(*b)->next = *a;
-		(*a) = *b;
-		*b = tmp;
-	}
-	write(1, "pa\n", 3);
+	return (tab);
 }
