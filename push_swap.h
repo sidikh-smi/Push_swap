@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:06:04 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:22:23 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/23 18:14:48 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int		ft_lstsize(t_list *lst);
 int		*add_tab(t_list *a);
 void	bubble_sort(int *tab, int size);
 void	index_list(t_list **a);
-void	list_sort(t_list **a, t_list **b);
+void	big_sort(t_list *a, t_list *b);
+int		ft_a_sort(t_list *a);
+void	short_sort(t_list *a, t_list *b);
 #endif

@@ -6,21 +6,11 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:04:57 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 00:21:35 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/23 18:35:21 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// void	init(t_list **a)
-// {
-// 	while (*a)
-// 	{
-// 		if ((*a)->content < (*a)->next->content)
-// 			(*a)->index = 0;
-// 		*a = (*a)->next;
-// 	}
-// }
 
 int	ft_a_sort(t_list *a)
 {
@@ -75,16 +65,13 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		det_error(a);
-		if (ft_a_sort(a) == 1)
+		if (ft_a_sort(a))
 			exit(0);
 		// operation_pb(&a, &b);
 		index_list(&a);
-		list_sort(&a, &b);
-		// t_list *tmp = a;
-		// while (tmp)
-		// {
-		// 	printf("i = %d || value = %d\n", tmp->index, tmp->content);
-		// 	tmp = tmp->next;
-		// }
+		if (argc <= 5)
+			short_sort(a, b);
+		else
+			big_sort(a, b);
 	}
 }
