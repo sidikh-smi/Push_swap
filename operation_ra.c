@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 23:21:33 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/22 17:00:30 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/23 23:45:38 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	operation_ra(t_list **a)
 
 	tmp = *a;
 	head = (*a)->next;
+	if (!*a)
+		return ;
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = *a;

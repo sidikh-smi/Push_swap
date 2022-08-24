@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:19:08 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/22 17:00:10 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/24 18:46:49 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	operation_pb(t_list **a, t_list **b)
 {
 	t_list	*tmp;
 
-	if (*a == NULL)
-		return ;
 	if (*b == NULL)
 	{
 		*b = *a;
@@ -26,10 +24,19 @@ void	operation_pb(t_list **a, t_list **b)
 	}
 	else
 	{
-		tmp = (*a)->next;
-		(*a)->next = *b;
-		(*b) = *a;
-		*a = tmp;
+		if ((*a)->next)
+		{
+			tmp = (*a)->next;
+			(*a)->next = *b;
+			(*b) = *a;
+			*a = tmp;
+		}
+		else
+		{
+			(*a)->next = (*b);
+			(*b) = (*a);
+			(*a) = NULL;
+		}
 	}
 	write(1, "pb\n", 3);
 }

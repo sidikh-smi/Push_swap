@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 23:33:52 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 15:55:17 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/24 18:37:59 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	big_sort(t_list *a, t_list *b)
 	int	num;
 
 	size = ft_lstsize(a);
-	num = (a)->index;
 	i = 0;
 	max_bit = max_bits(size);
 	while (!ft_a_sort(a))
@@ -41,19 +40,15 @@ void	big_sort(t_list *a, t_list *b)
 		j = 0;
 		while (j < size)
 		{
-			printf(">> %d\n", num);
+			num = (a)->index;
 			if ((num >> i) & 1)
 				operation_ra(&a);
 			else
 				operation_pb(&a, &b);
 			j++;
-			num = (a)->next->index;
 		}
 		while (b != NULL)
-		{
 			operation_pa(&a, &b);
-			b = (b)->next;
-		}
 		i++;
 	}
 }

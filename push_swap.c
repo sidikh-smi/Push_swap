@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:04:57 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/23 18:35:21 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/24 23:10:59 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	main(int argc, char **argv)
 		// operation_pb(&a, &b);
 		index_list(&a);
 		if (argc <= 5)
-			short_sort(a, b);
+			sort_three(a);
 		else
 			big_sort(a, b);
 	}
