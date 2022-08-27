@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:25:39 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/18 17:03:01 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/26 02:15:04 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	det_error(t_list *a)
 		while (q)
 		{
 			if (tmp->content == q->content)
-				ft_error("DUPLICATION!!!\n");
+				ft_error("ERROR\n");
 			q = q->next;
 		}
 		(tmp) = (tmp)->next;

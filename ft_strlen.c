@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   index_list.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 00:12:27 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/27 15:39:34 by skhaliff         ###   ########.fr       */
+/*   Created: 2021/11/07 15:05:27 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/26 00:47:44 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include"push_swap.h"
 
-void	index_list(t_list **a)
+size_t	ft_strlen(const char *s)
 {
-	int		*tab;
 	int		i;
-	t_list	*tmp;
 
-	tmp = *a;
-	tab = add_tab(*a);
-	bubble_sort(tab, ft_lstsize(*a) - 1);
-	while (tmp)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		i = 0;
-		while (i < ft_lstsize(*a))
-		{
-			if (tab[i] == tmp->content)
-				tmp->index = i;
-			i++;
-		}
-		tmp = tmp->next;
+		i++;
 	}
-	free(tab);
+	return (i);
 }

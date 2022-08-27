@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:04:57 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/24 23:10:59 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:38:07 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	argument_ch(char *s)
 		if (s[i] == '-' || s[i] == '+')
 			i++;
 		if (!ft_isdigit(s[i]))
-			ft_error("ARGUMENT!!!\n");
+			ft_error("ERROR\n");
 		i++;
 	}
 }
@@ -54,8 +54,8 @@ int	main(int argc, char **argv)
 	int		i;
 
 	i = 1;
-	b = NULL;
 	a = NULL;
+	b = NULL;
 	if (argc > 1)
 	{
 		while (argv[i])
@@ -67,11 +67,11 @@ int	main(int argc, char **argv)
 		det_error(a);
 		if (ft_a_sort(a))
 			exit(0);
-		// operation_pb(&a, &b);
 		index_list(&a);
 		if (argc <= 5)
 			sort_three(a);
 		else
 			big_sort(a, b);
+		system("leaks push_swap");
 	}
 }

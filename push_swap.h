@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:06:04 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/24 23:10:29 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:35:59 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ void	big_sort(t_list *a, t_list *b);
 int		ft_a_sort(t_list *a);
 //void	short_sort(t_list *a, t_list *b, int argc);
 void	sort_three(t_list *a);
+int		min_pos(t_list *a);
+size_t	ft_strlen(const char *s);
 #endif

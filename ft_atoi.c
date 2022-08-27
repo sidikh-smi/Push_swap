@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:51:29 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/18 16:22:30 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/26 19:26:44 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 long	convert_num(const char *s, int isneg)
 {
 	int					i;
-	unsigned long		nbr;
+	long long			nbr;
 
 	i = 0;
 	nbr = 0;
@@ -56,6 +56,6 @@ int	ft_atoi(const char *str)
 	if (isneg == 1)
 		nbr = -nbr;
 	if (nbr > INT_MAX || nbr < INT_MIN)
-		ft_error("ERROR!!!\n");
+		ft_error("ERROR\n");
 	return (nbr);
 }

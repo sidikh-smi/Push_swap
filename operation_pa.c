@@ -6,13 +6,13 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:18:51 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/24 19:59:12 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/26 02:34:07 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	  operation_pa(t_list **a, t_list **b)
+void	operation_pa(t_list **a, t_list **b)
 {
 	t_list	*tmp;
 
