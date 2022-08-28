@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:18:31 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/24 18:48:13 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/27 17:03:37 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	operation_ss(t_list *a, t_list *b)
 {
 	operation_sa(a);
 	operation_sb(b);
-	write(1, "ss\n", 3);
+	write(1, "ss\n", 4);
 }

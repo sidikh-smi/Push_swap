@@ -1,42 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_pb.c                                     :+:      :+:    :+:   */
+/*   operation_rrr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 14:19:08 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/27 17:04:00 by skhaliff         ###   ########.fr       */
+/*   Created: 2022/08/29 00:26:53 by skhaliff          #+#    #+#             */
+/*   Updated: 2022/08/29 00:27:09 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	operation_pb(t_list **a, t_list **b)
+void	operation_rr(t_list **a)
 {
-	t_list	*tmp;
-
-	if (*b == NULL)
-	{
-		*b = *a;
-		*a = (*a)->next;
-		(*b)->next = NULL;
-	}
-	else
-	{
-		if ((*a)->next)
-		{
-			tmp = (*a)->next;
-			(*a)->next = *b;
-			(*b) = *a;
-			*a = tmp;
-		}
-		else
-		{
-			(*a)->next = (*b);
-			(*b) = (*a);
-			(*a) = NULL;
-		}
-	}
-	write(1, "pb\n", 4);
+	operation_rra(a);
+	operation_rrb(a);
+	write(1, "rrr\n", 5);
 }
