@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 14:16:56 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/27 17:03:31 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/29 11:20:09 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	operation_sb(t_list *b)
 	tmp = b->content;
 	b->content = b->next->content;
 	b->next->content = tmp;
-	write(1, "sb\n", 4);
+	write(1, "sb\n", 3);
 }

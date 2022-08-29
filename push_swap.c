@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:04:57 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/29 00:34:45 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/29 12:24:27 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,11 @@ void	argument_ch(char *s)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == '-' || s[i] == '+' || s[i] == '"')
+		printf(">> %c\n", s[i]);
+		if (s[i] == '-' || s[i] == '+')
 			i++;
-		if (!ft_isdigit(s[i]))
-			ft_error("ARGUMENT\n");
+		if (!ft_isdigit(s[i]) || s[i] == '"')
+			ft_error("ERROR\n");
 		i++;
 	}
 }
@@ -72,6 +73,5 @@ int	main(int argc, char **argv)
 			short_sort(&a, &b, argc);
 		else
 			big_sort(a, b);
-		system("leaks push_swap");
 	}
 }

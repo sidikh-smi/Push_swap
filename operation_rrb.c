@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:10:43 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/27 17:03:43 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/29 11:19:57 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	operation_rrb(t_list **b)
 	tmp->next->next = *b;
 	*b = tmp->next;
 	tmp->next = NULL;
-	write(1, "rrb\n", 5);
+	write(1, "rrb\n", 4);
 }

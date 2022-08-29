@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 00:24:37 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/29 00:27:13 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/29 11:19:47 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	operation_rr(t_list **a)
 {
 	operation_ra(a);
 	operation_rb(a);
-	write(1, "rr\n", 4);
+	write(1, "rr\n", 3);
 }
