@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 22:51:29 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/26 19:26:44 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/29 14:07:12 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	nbr = 0;
 	isneg = 0;
+	if (str[0] == '\0')
+		ft_error("ERROR\n");
 	while (str[i] != '\0' && (str[i] == ' '
 			|| str[i] == '\t' || str[i] == '\n'))
 		i++;
