@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 23:33:52 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/29 11:50:33 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/10/24 08:46:30 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	big_sort(t_list *a, t_list *b)
 	size = ft_lstsize(a);
 	i = 0;
 	max_bit = max_bits(size);
-	while (i< max_bit)
+	while (i < max_bit)
 	{
 		j = 0;
 		while (j < size)

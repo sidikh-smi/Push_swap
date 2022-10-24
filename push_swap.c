@@ -6,7 +6,7 @@
 /*   By: skhaliff <skhaliff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 13:04:57 by skhaliff          #+#    #+#             */
-/*   Updated: 2022/08/29 12:24:27 by skhaliff         ###   ########.fr       */
+/*   Updated: 2022/08/29 14:07:53 by skhaliff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	argument_ch(char *s)
 	i = 0;
 	while (s[i])
 	{
-		printf(">> %c\n", s[i]);
 		if (s[i] == '-' || s[i] == '+')
 			i++;
 		if (!ft_isdigit(s[i]) || s[i] == '"')
